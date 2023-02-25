@@ -19,6 +19,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getPlayers",
+				"outputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "lottery",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -92,11 +105,11 @@
 	},
 	"sources": {
 		"contracts/Lottery.sol": {
-			"keccak256": "0x7f57597c0b2876062aabcaefc940f42d034454015dce4533a542e4a4d747380d",
+			"keccak256": "0x6bde6aa6d37bcf8b25da3a077ad83c16137e09d8b2876e1b437f6e170ab166a2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://55ad2c180751905fbd8cc52fd5cee0501c2d96f4d3058102a5b5b6fc6840b429",
-				"dweb:/ipfs/QmekNTYAN9UKS8N3RbdFi3t3u9B8yAHrxTTyhVe8bJUGbN"
+				"bzz-raw://2cdb53046410c4666eae33a771756ca6432c0e22f584c62964c0f86736e65470",
+				"dweb:/ipfs/QmbStZ5i5ewcGafd7AFUDYhMzGsp5iSBnVHaUv8B7RVdHh"
 			]
 		}
 	},
