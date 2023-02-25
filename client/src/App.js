@@ -1,6 +1,7 @@
 import React from "react";
 import web3 from "./web3";
 import lottery from "./lottery";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -46,32 +47,37 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Lottery Dapp</h1>
-        <p>
+        <h1 className="title">Lottery Dapp</h1>
+        <p className="p">
           This contract is managed by {this.state.manager}. There are currently{" "}
           {this.state.players.length} people entered, competing to win{" "}
           {web3.utils.fromWei(this.state.balance, "ether")} ether!
         </p>
         <hr />
-        <form onSubmit={this.onSubmit}>
-          <h4>Want to try your luck?</h4>
-          <div>
-            <label>Amount of ether to enter</label>
+        <form className="form-control" onSubmit={this.onSubmit}>
+          <div className="container">
+            <h4 className="headline">Want to try your luck?</h4>
+            <div className="label">
+              <label>Enter ETH to enter Lottery!</label>
+            </div>
+
             <input
+              className="input"
               value={this.state.value}
               onChange={(event) => this.setState({ value: event.target.value })}
             />
           </div>
-          <button>Enter</button>
+          <button className="btn">Enter</button>
         </form>
         <hr />
+        <div className="container">
+          <h4 className="headline">Ready to pick a winner? </h4>
+          <button className="btn" onClick={this.onClick}>
+            Pick a winner!
+          </button>
 
-        <h4>Ready to pick a winner?</h4>
-        <button onClick={this.onClick}>Pick a winner!</button>
-
-        <hr />
-
-        <h1>{this.state.message}</h1>
+          <h2>{this.state.message}</h2>
+        </div>
       </div>
     );
   }
