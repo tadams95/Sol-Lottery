@@ -18,6 +18,19 @@ class App extends React.Component {
 
     this.setState({ manager, players, balance });
   }
+
+  onSubmit = async (event) => {
+    event.preventDefault();
+
+    const accounts = await web3.eth.getAccounts();
+
+    this.setState({ message: "Waiting on transaction success..." });
+
+    await lottery.methods.enter().send({
+      from: accounts[0],
+      value: web3.utils.toWei(this.state.value, "ether"),
+    });
+  };
   render() {
     return (
       <div className="App">
@@ -39,7 +52,9 @@ class App extends React.Component {
           </div>
           <button>Enter</button>
         </form>
-        <hr></hr>
+        <hr />
+
+        <h1>{this.state.message}</h1>
       </div>
     );
   }
