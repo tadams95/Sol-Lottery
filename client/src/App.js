@@ -47,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1 className="title">Lottery Dapp</h1>
+        <h1 className="title">LOTTERY DAPP</h1>
         <p className="p">
           This contract is managed by {this.state.manager}. There are currently{" "}
           {this.state.players.length} people entered, competing to win{" "}
